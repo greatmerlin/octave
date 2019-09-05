@@ -1,0 +1,11 @@
+c = [200, 300]';
+A = [ 1, 2; 1, 1; 1.5, 0.5];
+b = [22, 13, 16.5]';
+lb = [0, 0]';
+ub = [];
+ctype = "UUU";
+vartype = "CC";
+s = 1;
+param.msglev = -1;
+param.itlim = 100;
+[xmin, fmin, status, extra] = glpk (c, A, b, lb, ub, ctype, vartype, s, param);
